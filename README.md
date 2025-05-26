@@ -34,4 +34,5 @@ Welcome to my competitive programming journey repository! This contains my solut
 - **Primary Language**: C++ (100%)
 - **Development Environment**: 
   - Competitive programming templates
+  - IDE: Sublime Text
   - Standard algorithms and data structures implementations
