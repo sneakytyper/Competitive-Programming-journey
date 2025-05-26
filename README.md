@@ -20,7 +20,10 @@ Welcome to my competitive programming journey repository! This contains my solut
 
 - **Learning Resources**
   - [Resources](/Resources) - Useful CP resources and references
-  - [TLE Levels 1-4](/TLE%20LEVEL%201) - Template Library Expansion (TLE) practice
+  - [TLE Levels 1](/TLE%20LEVEL%201) - Soln of TLE Level 1 Problems
+  - [TLE Levels 2](/TLE%20LEVEL%202) - Soln of TLE Level 2 Problems
+  - [TLE Levels 3](/TLE%20LEVEL%203) - Soln of TLE Level 3 Problems
+  - [TLE Levels 4](/TLE%20LEVEL%203) - Soln of TLE Level 2 Problems
 
 - **Miscellaneous**
   - [raw](/raw) - Raw code files
