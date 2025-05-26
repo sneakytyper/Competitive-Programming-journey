@@ -8,7 +8,7 @@ Welcome to my competitive programming journey repository! This contains my solut
 ## 📂 Repository Structure
 
 - **Contest Platforms**
-  - [AtCoder](/Atcoder) - Solutions for AtCoder contests
+  - [AtCoder](/AtCoder) - Solutions for AtCoder contests
   - [CodeChef](/Codechat) - CodeChef competition solutions
   - [Codeforces](/Codeforces) - Codeforces round solutions
   - [ICPC](/ICPC) - ICPC contest preparations
