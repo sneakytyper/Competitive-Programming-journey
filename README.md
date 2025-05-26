@@ -12,7 +12,7 @@ Welcome to my competitive programming journey repository! This contains my solut
   - [CodeChef](/Codechat) - CodeChef competition solutions
   - [Codeforces](/Codeforces) - Codeforces round solutions
   - [ICPC](/ICPC) - ICPC contest preparations
-  - [IICPC](/IICPC) - Additional ICPC materials
+  - [IICPC](/IICPC) - IICPC Contests
   - [Local CP Context](/Local%20CP%20Context) - Local competition solutions
 
 - **Special Events**
