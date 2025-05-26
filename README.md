@@ -24,7 +24,7 @@ Welcome to my competitive programming journey repository! This contains my solut
 
 - **Miscellaneous**
   - [raw](/raw) - Raw code files
-  - [Invicon.io](/Invicon.io) - Additional tools
+  - [favicon.io](/favicon.io) - Additional tools
 
 ## 🛠️ Technical Details
 
