@@ -13,7 +13,7 @@ Welcome to my competitive programming journey repository! This contains my solut
   - [Codeforces](/Codeforces) - Codeforces round solutions
   - [ICPC](/ICPC) - ICPC contest preparations
   - [IICPC](/IICPC) - IICPC Contests
-  - [Local CP Context](/Local%20CP%20Context) - Local competition solutions
+  - [Local CP Contest](/Local%20CP%20Contest) - Local competition solutions
 
 - **Special Events**
   - [Goldman Sachs Hackathon 2025](/Goldman%20Sachs/Goldman%20CS%20Hackathon%202025) - Hackathon materials
