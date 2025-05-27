@@ -11,11 +11,11 @@ Welcome to my competitive programming journey repository! This contains my solut
   - [AtCoder](/AtCoder) - Solutions for AtCoder contests
   - [CodeChef](/Codechat) - CodeChef competition solutions
   - [Codeforces](/Codeforces) - Codeforces round solutions
-  - [ICPC](/ICPC) - ICPC contest preparations
-  - [IICPC](/IICPC) - IICPC Contests
   - [Local CP Contest](/Local%20CP%20Contest) - Local competition solutions
 
 - **Special Events**
+  - [IICPC](/IICPC) - IICPC Codefest Preparation
+  - [ICPC](/ICPC) - ICPC Preparation
   - [Goldman Sachs Hackathon 2025](/Goldman%20Sachs/Goldman%20CS%20Hackathon%202025) - Hackathon problems
 
 - **Learning Resources**
