@@ -38,16 +38,6 @@ int main(){
     while(t--){
         string s;
         cin >> s;
-        
-        string arr[26] = {"aa", "bb", "cc", "dd", "ee", "ff", "gg", "hh", "ii", "jj", "kk", "ll", "mm", "nn", "oo", "pp", "qq", "rr", "ss", "tt", "uu", "vv", "ww", "xx", "yy", "zz"};
-  
-        for(int i=0; i<26; i++){
-        	if(arr[i]== s){
-        		cout << s; 
-        	}
-        	else{
-        		continue;
-        	}
 
         vector<string> substrings;
 
@@ -86,7 +76,7 @@ int main(){
 	    if(count==0){
 	    	cout << "-1" <<endl;
 	    }
+	    
     }
-	}
     return 0;
 }
