@@ -16,7 +16,7 @@ Welcome to my competitive programming journey repository! This contains my solut
   - [Local CP Contest](/Local%20CP%20Contest) - Local competition solutions
 
 - **Special Events**
-  - [Goldman Sachs Hackathon 2025](/Goldman%20Sachs/Goldman%20CS%20Hackathon%202025) - Hackathon materials
+  - [Goldman Sachs Hackathon 2025](/Goldman%20Sachs/Goldman%20CS%20Hackathon%202025) - Hackathon problems
 
 - **Learning Resources**
   - [Resources](/Resources) - Useful CP resources and references
