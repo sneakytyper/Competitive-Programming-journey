@@ -24,7 +24,13 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
+int power(int n){
+	if(n==0){
+		return 1;
+	}
 
+	return 2*power(n-1);
+}
 int main(){
     init_code();
  
@@ -36,24 +42,10 @@ int main(){
     cin >> t;
 
     while(t--){
-        int n, l, r;
-        cin >> n >> l >> r;
+        int n;
+        cin >> n;
 
-        int a[n];
-        for(int i=0; i<n; i++){
-        	cin >> a[i];
-        }
-
-        int count = 0;
-        for(int i=0; i<n; i++){
-        	for(int j=i+1; j<n; j++){
-        		if(a[i]+a[j]>=l && a[i]+a[j]<=r){
-        			count++;
-        		}
-        	}
-        }
-
-        cout << count << endl;
+        cout << power(n)-1 << endl;
     }
     return 0;
 }
