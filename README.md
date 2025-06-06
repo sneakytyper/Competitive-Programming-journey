@@ -25,6 +25,8 @@ Welcome to my competitive programming journey repository! This contains my solut
   - [TLE Levels 3](/TLE%20LEVEL%203) - Soln of TLE Level 3 Problems
   - [TLE Levels 4](/TLE%20LEVEL%204) - Soln of TLE Level 4 Problems
   - [CSES](/CSES) - Soln for [CSES.fi](https://cses.fi) Problems
+  - [CP 31 Sheet](/CP%2031%20shee) - Soln of CP 31 Sheet (Rating Wise)
+  - [USACO Guide](/USACO%20Guide) - USACO Guide Module Problems
 
 - **Miscellaneous**
   - [raw](/raw) - Raw code files
