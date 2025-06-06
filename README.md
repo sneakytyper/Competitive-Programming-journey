@@ -7,18 +7,18 @@ Welcome to my competitive programming journey repository! This contains my solut
 
 ## 📂 Repository Structure
 
-- **Contest Platforms**
+- **Contest Platforms (CP)**
   - [AtCoder](/AtCoder) - Solutions for AtCoder contests
   - [CodeChef](/Codechat) - CodeChef competition solutions
   - [Codeforces](/Codeforces) - Codeforces round solutions
 
-- **Special Events**
+- **Special Events (SE)**
   - [IICPC](/IICPC) - IICPC Codefest Preparation
   - [ICPC](/ICPC) - ICPC Preparation
   - [Goldman Sachs Hackathon 2025](/Goldman%20Sachs/Goldman%20CS%20Hackathon%202025) - Hackathon problems
   - [Local CP Contest](/Local%20CP%20Contest) - Local competition solutions
 
-- **Learning Resources**
+- **Learning Resources (LR)**
   - [Resources](/Resources) - Useful CP resources and references
   - [TLE Levels 1](/TLE%20LEVEL%201) - Soln of TLE Level 1 Problems
   - [TLE Levels 2](/TLE%20LEVEL%202) - Soln of TLE Level 2 Problems
