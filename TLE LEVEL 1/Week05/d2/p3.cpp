@@ -24,42 +24,35 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
+bool check(int x){
+	int num = 0;
+	for(int i=2; i<=sqrt(x); i++){
+		if(x%i==0){
+			num++;
+		}
+
+		if(num>0){
+			return 1;
+		}
+	}
+
+	return 0;
+}
+
 void solve(){
 	int n;
-	cin >> n;
+	cin >> n;	
 
-
-	cout << n << endl;
-
-
-	int a[n];
-	for(int i=0; i<n; i++){
-		cin >> a[i];
+	int a = 4;
+	int b = 0;
+	while(true){
+		b = a+n;
+		if(check(a)==1 && check(b)==1){
+			cout << b << " " << a << endl;
+			return;
+		}
+		a++;
 	}
-
-	for(int i=0; i<n; i++){
-		cout << a[i] << " ";
-	}
-
-	// int maxi = INT_MIN;
-	// for(int i=0; i<n; i++){
-	// 	maxi = max(maxi, a[i]);
-	// 	cout << maxi << " ";
-	// }
-
-	// cout << maxi << endl;
-
-	// int sum = 0;
-	// for(int i=0; i<n; i++){
-	// 	if(a[i]<maxi){
-	// 		a[i] += maxi - a[i];
-	// 		sum += maxi - a[i];
-	// 	}
-	// }
-
-	// cout << sum << endl;
-	// return;
-
 }
 
 int main(){

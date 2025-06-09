@@ -24,12 +24,18 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
-void solve(){
-	int n =0;
-	cin >> n;
-
-	cout << n << endl;
-	cout << n << endl;
+unsigned long long sumOfGroup(int k) {
+    // Return the sum of the elements of the k'th group.
+    unsigned long long  s = ((k-1)*k)/2 *1LL;
+    unsigned long long num = 2*s - 1;
+    
+    unsigned long long sum = 0;
+    for(unsigned long long i=1; i<=k; i++){
+        num += 2;
+        sum += num;
+    }
+    
+    return sum;
 }
 
 int main(){
@@ -38,7 +44,9 @@ int main(){
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
 
-    solve();
+    int k;
+    cin >> k;
 
+    cout << sumOfGroup(k) << endl;
     return 0;
 }
