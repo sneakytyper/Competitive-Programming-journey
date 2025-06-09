@@ -24,19 +24,49 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
+void solve(){
+    int n;
+    cin >> n;
+
+    vector<ll> a(n);
+    for(int i=0; i<n; i++){
+        cin >> a[i];
+    }
+
+    ll carry = 0;
+    
+    int flag = 0;
+    for(int i=0; i<n; i++){
+        if(a[i]>=0){
+            carry += a[i];
+        }
+        else{
+            ll transfer = a[i]+carry;
+            if(transfer>=0){
+                carry = transfer;
+            }
+            else{
+                carry = 0;
+            }
+        } 
+    }
+
+   
+    cout << carry << endl;
+
+}
 
 int main(){
     init_code();
  
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
-    cout.tie(NULL);
 
+    int t;
+    cin >> t;
 
-	string s;
-	cin >> s;
-	cout << s[s.size() - 2];
-
-
+    while(t--){
+        solve();
+    }
     return 0;
 }

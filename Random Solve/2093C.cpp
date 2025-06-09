@@ -4,6 +4,7 @@
 **/
  
 #include <bits/stdc++.h>
+#include <cmath>
 using namespace std;
  
 //for input and output.
@@ -24,25 +25,49 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
-ull power(ull n){
-    ull m = 1e9 + 7;
-    if(n==0)
-        return 1;
-
-    return  (2 * (power(n-1) % m))%m;
-
+int count_digits(int x){
+	int cnt = 0;
+	
+	while(x!=0){
+		cnt++;
+		x /= 10;
+		
+	}
+	return cnt;
 }
 
-
 void solve(){
-	ull n;
-	cin >> n;
+	int x, k;
+	cin >> x >> k;
 
-    ull result = power(n);
+	if(x==1 && k==1){
+		cout << "NO" << endl;
+		return;
+	}
+	
+	int d = count_digits(x);
 
 
-    cout << result  << endl;
-    return;
+	int num = 0;
+	int i=0;
+	while(i!=k){
+		num += pow(10, i*d) * x;
+		i++;
+	}
+
+
+
+	for(int i=2; i<sqrt(num); i++){
+		if(num%i==0){
+			cout << "NO" << endl;
+			return;
+		}
+	}
+
+	cout << "YES" << endl;
+	return;
+	
+
 }
 
 int main(){
@@ -50,10 +75,12 @@ int main(){
  
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
-    cout.tie(NULL);
 
-    solve();
+    int t;
+    cin >> t;
 
+    while(t--){
+        solve();
+    }
     return 0;
 }
-	

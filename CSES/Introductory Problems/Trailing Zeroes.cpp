@@ -24,33 +24,46 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
+int fact(int n){
+
+	int m = 1e9 + 7;
+	if(n==0 || n==1)
+		return 1;
+
+	return ((n%m)*fact(n-1))%m;
+}
+
+void solve(){
+	int n;
+	cin >> n;
+
+	int num = fact(n);
+
+	int cnt = 0;
+	bool flag = 0;
+
+	cout << num << endl;
+
+	while(flag == 0){
+		if(num%10 == 0){
+			cnt++;
+		}
+		else{
+			flag = 1;
+		}
+
+		num /= 10;
+	}
+
+	cout << cnt << endl;
+}
 
 int main(){
     init_code();
  
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
-    cout.tie(NULL);
 
-    int n;
-    cin >> n;
-
-    int a[n][3];
-    
-    int total_prob = 0;
-
-    for(int i=0; i<n; i++){
-    	cin >> a[i][0] >> a[i][1] >> a[i][2];
-    	int cnt=0;
-    	if(a[i][0]==1) cnt++;
-    	if(a[i][1]==1) cnt++;
-    	if(a[i][2]==1) cnt++;
-
-    	if(cnt>=2){
-    		total_prob++;
-    	}
-    }
-
-    cout << total_prob << endl;
+    solve();
     return 0;
 }

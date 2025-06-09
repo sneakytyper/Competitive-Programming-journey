@@ -24,25 +24,38 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
-ull power(ull n){
-    ull m = 1e9 + 7;
-    if(n==0)
-        return 1;
-
-    return  (2 * (power(n-1) % m))%m;
-
-}
-
-
 void solve(){
-	ull n;
-	cin >> n;
+	int n, x;
+	cin >> n >> x;
 
-    ull result = power(n);
+	int a[n];
+	for(int i=0; i<n; i++){
+		cin >> a[i];
+	}
+
+	int i=0;
+	while(a[i]!=1 && i<n){
+		i++;
+	}
+
+	int p = i + x -1;
+	if(p>=n-1){
+		cout << "YES" << endl;
+		return;
+	}
+	else{
+		for(int i=p+1; i<n; i++){
+			if(a[i]==1){
+				cout << "NO" << endl;
+				return;
+			}
+		}
+	}
+
+	cout << "YES" << endl;
+	return;
 
 
-    cout << result  << endl;
-    return;
 }
 
 int main(){
@@ -50,10 +63,12 @@ int main(){
  
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
-    cout.tie(NULL);
 
-    solve();
+    int t;
+    cin >> t;
 
+    while(t--){
+        solve();
+    }
     return 0;
 }
-	

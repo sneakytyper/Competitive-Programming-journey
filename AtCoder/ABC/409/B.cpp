@@ -11,7 +11,6 @@ void init_code(){
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    freopen("error.txt", "w", stderr);
     #endif 
 }
  
@@ -24,25 +23,44 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
-ull power(ull n){
-    ull m = 1e9 + 7;
-    if(n==0)
-        return 1;
+int checker(ll arr[], int n, ll i){
+	ll cnt = 0;
+	for(int j=0; j<n; j++){
+		if(arr[j]>=i){
+			cnt++;
+		}
+	}
 
-    return  (2 * (power(n-1) % m))%m;
-
+	return cnt;
 }
 
-
 void solve(){
-	ull n;
+	int n;
 	cin >> n;
 
-    ull result = power(n);
+	ll a[n];
+	for(int i=0; i<n; i++){
+		cin >> a[i];
+	}
 
+	ll maxi = INT_MIN;
+	for(int i=0; i<n; i++){
+		maxi = max(maxi, a[i]);
+	}
 
-    cout << result  << endl;
-    return;
+	ll i=maxi;
+	while(i>=0){
+		ll cnt = checker(a,n,i);
+
+		if(cnt>=i){
+			cout << i << endl;
+			return;
+		}
+	i--;
+	}
+
+	cout << 0 << endl;
+	return;
 }
 
 int main(){
@@ -50,10 +68,9 @@ int main(){
  
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
-    cout.tie(NULL);
+
+    __int128_t x;
 
     solve();
-
     return 0;
 }
-	

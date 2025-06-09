@@ -25,15 +25,16 @@ typedef long double ld;
 #define endl "\n"
 
 void solve(){
-	int n,k,w;
-	cin >> k >> n >> w;
+	int n;
+	cin >> n;
 
-	int total_cost = k*((w*(w+1))/2);
-	int borrow_money = total_cost - n;
+	int i=2;
+	while(i<=n){
+		cout << i << " ";
+		i++;
+	}
 
-	(borrow_money>0)? cout << borrow_money : cout << 0;
-	cout << endl;
-	
+	cout << 1 << endl;
 	return;
 }
 
@@ -42,8 +43,12 @@ int main(){
  
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
-    cout.tie(NULL);
 
-    solve();
+    int t;
+    cin >> t;
+
+    while(t--){
+        solve();
+    }
     return 0;
 }

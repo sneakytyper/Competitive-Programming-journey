@@ -24,25 +24,28 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
-ull power(ull n){
-    ull m = 1e9 + 7;
-    if(n==0)
-        return 1;
-
-    return  (2 * (power(n-1) % m))%m;
-
-}
-
-
 void solve(){
-	ull n;
+	int n;
 	cin >> n;
 
-    ull result = power(n);
+	string t;
+	cin >> t;
+
+	string a;
+	cin >> a;
+
+	int i=0;
+	while(i<n){
+		if(t[i]=='o' && a[i]=='o'){
+			cout << "Yes" << endl;
+			return;
+		}
+		i++;
+	}
 
 
-    cout << result  << endl;
-    return;
+	cout << "No" << endl;
+	return;
 }
 
 int main(){
@@ -56,4 +59,3 @@ int main(){
 
     return 0;
 }
-	

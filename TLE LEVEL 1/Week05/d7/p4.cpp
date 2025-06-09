@@ -24,36 +24,62 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
-ull power(ull n){
-    ull m = 1e9 + 7;
-    if(n==0)
-        return 1;
-
-    return  (2 * (power(n-1) % m))%m;
-
-}
-
-
 void solve(){
-	ull n;
+	int n;
 	cin >> n;
 
-    ull result = power(n);
+	vector<ll> a(n);
+	for(int i=0; i<n; i++){
+		cin >> a[i];
+	}
 
+	int j = 0;
+	for(int i=0; i<n-1; i++){
+		j = i+1;
 
-    cout << result  << endl;
-    return;
+		while(a[i]>0 && j<n){
+				
+			if(a[j]<0){
+				if(a[i]+a[j]>=0){
+					a[i] = a[i] + a[j];
+					a[j] = 0;
+				}
+				else{
+					a[j] = a[i] + a[j];
+					a[i] = 0;
+					}
+			}
+			j++;
+		}
+	}
+
+	ll sum = 0;
+	for(int i=0; i<n; i++){
+		if(a[i]>0){
+			sum += a[i];
+		}
+	}
+   
+	cout << sum << endl;
+
 }
+
+//tc - O(n2)
+//It will give tle, better soln in p4a.cpp
 
 int main(){
     init_code();
  
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
-    cout.tie(NULL);
 
-    solve();
+    int t;
+    cin >> t;
 
+    while(t--){
+        solve();
+    }
     return 0;
 }
-	
+
+
