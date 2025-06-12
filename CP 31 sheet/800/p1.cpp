@@ -25,54 +25,41 @@ typedef long double ld;
 #define endl "\n"
 
 void solve(){
-	int n;
-	cin >> n;
+	int n, k;
+	cin >> n >> k;
+	int x = k;
 
 	int a[n];
 	for(int i=0; i<n; i++){
 		cin >> a[i];
 	}
 
-    int mini = INT_MAX;
-    do{
-        for(int i=0; i<n; i++){
-            a[i] -= i+1;
-        }
+	int flag = 0;
+	for(int i=0; i<n-1; i++){
+		if(a[i+1]<a[i]){
+			flag = 1;
+		}
+	}
 
-        
-        for(int i=0; i<n; i++){
-            mini= min(mini, a[i]);
-        }
-    }while(mini>0);
+	if(flag==0){
+		cout << "YES" << endl;
+		return;
+	}
+	else{
+		if(k==1){
+			cout << "NO" << endl;
+			return;
+		}
+		else{
+			while(x<=k)
+			for(int i=0; i<n; i++){
 
-    for(int i=0; i<n; i++){
-        a[i] += i+1;
-    }
-
-    if(n==2){
-        if(abs(a[1]-a[0])==1){
-            cout << "YES" << endl;
-            return;
-        }
-        else{
-            cout << "NO" << endl;
-            return;
-        }
-    }
+				if(a[i]>a[i+1] && x<=k)
+			}
+		}
+	}
 
 
-
-
-    int x = a[1]-a[0];
-    for(int i=0; i<n-1; i++){
-        if(a[i+1]-a[i]!=x){
-            cout << "NO" << endl;
-            return;
-        }
-    }
-
-    cout << "YES" << endl;
-    return;
 }
 
 int main(){

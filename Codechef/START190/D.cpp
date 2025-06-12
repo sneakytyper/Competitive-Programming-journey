@@ -28,51 +28,57 @@ void solve(){
 	int n;
 	cin >> n;
 
-	int a[n];
-	for(int i=0; i<n; i++){
-		cin >> a[i];
+	string s;
+	cin >> s;
+
+	if(s[0]=='0' && s[1]=='0'){
+		cout << "NO" << endl;
+		return;
 	}
 
-    int mini = INT_MAX;
-    do{
-        for(int i=0; i<n; i++){
-            a[i] -= i+1;
-        }
+	if(s[n-2]=='0' && s[n-1]=='0'){
+		cout << "NO" << endl;
+		return;
+	}
 
-        
-        for(int i=0; i<n; i++){
-            mini= min(mini, a[i]);
-        }
-    }while(mini>0);
+	for(int i=0; i<n; i++){
+		if(s[i]=='0' && s[i+1]=='0' && s[i+2]=='0'){
+			cout << "NO" << endl;
+			return;
+		}
 
-    for(int i=0; i<n; i++){
-        a[i] += i+1;
-    }
+		if(s[i]=='0' && s[i+1]=='1'){
+			if(s[i+2]=='1'){
 
-    if(n==2){
-        if(abs(a[1]-a[0])==1){
-            cout << "YES" << endl;
-            return;
-        }
-        else{
-            cout << "NO" << endl;
-            return;
-        }
-    }
+			}
+			else{
+				if(s[i+3]=='1'){
+
+				}
+				else{
+					cout << "NO" << endl;
+					return;
+				}
+			}
+		}
+	}
+
+	for(int i=1; i<n; i++){
+		if(s[i]=='0' && s[i+1]=='0'){
+			if(s[i-1]=='1' && s[i+2]=='1'){
 
 
+			}
+			else{
+				cout << "NO" << endl;
+				return;
+			}
+		}
 
+		cout << "YES" << endl;
+		return;
 
-    int x = a[1]-a[0];
-    for(int i=0; i<n-1; i++){
-        if(a[i+1]-a[i]!=x){
-            cout << "NO" << endl;
-            return;
-        }
-    }
-
-    cout << "YES" << endl;
-    return;
+	}
 }
 
 int main(){
