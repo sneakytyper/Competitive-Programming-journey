@@ -24,24 +24,30 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
-vector<int> subset;
-vector<int> s = {1,2,3};
-int n = s.size();
+void solve(){
+	int n;
+	cin >> n;
 
-void search(int k){
-    if(k==n+1){
+	if(n==3){
+		cout << 3 << endl;
+		return;
+	}
 
-    }
-    else{
-        subset.pb(k);
-    }
+	cout << 2 << endl;
+	return;
 }
 
 int main(){
     init_code();
-    
-    int k=1;
-    search(k);
+ 
+    ios_base::sync_with_stdio(0); 
+    cin.tie(NULL);
 
-    
+    int t;
+    cin >> t;
+
+    while(t--){
+        solve();
+    }
+    return 0;
 }

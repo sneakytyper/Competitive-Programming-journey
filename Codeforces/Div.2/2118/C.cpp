@@ -24,24 +24,40 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
-vector<int> subset;
-vector<int> s = {1,2,3};
-int n = s.size();
-
-void search(int k){
-    if(k==n+1){
-
-    }
-    else{
-        subset.pb(k);
-    }
+string decToBinary(int n) {
+    int len = (int)(log2(n));
+    return bitset<64>(n).to_string().substr(64 - len - 1);
 }
+
+void solve(){
+	int n, k;
+	cin >> n >> k;
+
+	int a[n];
+	for(int i=0; i<n; i++){
+		cin >> a[i];
+	}
+
+	int ans;
+	for(int i=0; i<n; i++){
+		int sum = 0;
+
+		decToBinary(a[i]);
+	}
+}
+
 
 int main(){
     init_code();
-    
-    int k=1;
-    search(k);
+ 
+    ios_base::sync_with_stdio(0); 
+    cin.tie(NULL);
 
-    
+    int t;
+    cin >> t;
+
+    while(t--){
+        void;
+    }
+    return 0;
 }
