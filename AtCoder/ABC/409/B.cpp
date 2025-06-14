@@ -38,29 +38,42 @@ void solve(){
 	int n;
 	cin >> n;
 
-	ll a[n];
+	int a[n];
 	for(int i=0; i<n; i++){
 		cin >> a[i];
 	}
 
-	ll maxi = INT_MIN;
-	for(int i=0; i<n; i++){
-		maxi = max(maxi, a[i]);
+	sort(a, a+n);
+	vector<pair<int,int>> v;
+
+	for(int i=0; i<=a[n-1]; i++){
+		int cnt = 0;
+		
+		for(int j=0; j<n; j++){
+			
+			if(a[j]>=i){
+				cnt++;
+			}
+		}
+		// cout << i << " ";
+		// cout << cnt << endl;
+		v.pb({cnt,i});
 	}
 
-	ll i=maxi;
-	while(i>=0){
-		ll cnt = checker(a,n,i);
+	sort(v.begin(), v.end());
 
-		if(cnt>=i){
-			cout << i << endl;
+
+
+	for(int i=0; i<v.size(); i++){
+		if(v[i].first >= v[i].second){
+			cout << v[i].first << endl;
 			return;
 		}
-	i--;
+
+		
 	}
 
-	cout << 0 << endl;
-	return;
+
 }
 
 int main(){
@@ -68,8 +81,6 @@ int main(){
  
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
-
-    __int128_t x;
 
     solve();
     return 0;

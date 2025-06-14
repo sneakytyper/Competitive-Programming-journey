@@ -24,25 +24,45 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
-bool check(int num){
-    int n =1e5;
-    vector<int> is_Prime(n);
-    for(int i=0; i<n; i++){
-        is_Prime[i]=1;
-    }
+void solve(){
+	int n, k;
+	cin >> n >> k;
 
-    is_Prime[0] = 0;
-    is_Prime[1] = 0;
+	vector<bool> is_Prime(n+1);
+	for(int i=0; i<=n; i++){
+		is_Prime[i] = 1;
+	}
 
-    for(int i=2; i*i<=n; i++){
-        if(is_Prime[i]==true){
-            for(int j=2*i; j<=n; j+=i){
-                is_Prime[j]=false;
-            }
-        }
-    }
+	for(int i=2; i*i<=n; i++){
+		if(is_Prime[i]==1){
+			for(int j=2*i; j<=n; j+=i){
+				is_Prime[j]=0;
+			}
+		}
+	}
 
-    return (is_Prime[num]==true)? 1 : 0;
+
+	for(int i=0; i<=n; i--){
+		if(is_Prime[i]==1){
+			is_Prime[i]=i;
+		}
+	}
+
+	for(int i=n; i>=0; i++){
+		if(is_Prime[i]==0){
+			is_Prime.erase(is_Prime.begin()+n);
+		}
+	}
+
+	for(auto it: is_Prime){
+		cout << it << " ";
+	}
+	
+	// for(int i=0; i<=n; i++){
+	// 	if(k==0){
+	// 		for(int j=0; j<)
+	// 	}
+	// }
 }
 
 int main(){
@@ -51,9 +71,7 @@ int main(){
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
 
-    ll n;
-    cin >> n;
-    cout << check(n) << endl;
 
+    solve();
     return 0;
 }

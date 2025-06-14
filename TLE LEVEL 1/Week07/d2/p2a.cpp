@@ -24,25 +24,44 @@ typedef long double ld;
 #define pb push_back
 #define endl "\n"
 
-bool check(int num){
-    int n =1e5;
-    vector<int> is_Prime(n);
-    for(int i=0; i<n; i++){
-        is_Prime[i]=1;
-    }
+void solve(){
+	int l, r, k;
+	cin >> l >> r >> k;
 
-    is_Prime[0] = 0;
-    is_Prime[1] = 0;
+	if(r-l==0){
+		if(r==1){
+			cout << "NO" << endl;
+			return;
+		}
+		else{
+			cout << "YES" << endl;
+			return;
+		}
+	}
 
-    for(int i=2; i*i<=n; i++){
-        if(is_Prime[i]==true){
-            for(int j=2*i; j<=n; j+=i){
-                is_Prime[j]=false;
-            }
-        }
-    }
+	int n = r - l + 1;
+	int odd = 0;
+	if(n%2==0){
+		odd = n/2;
+	}
+	else{
+		if(l%2==0){
+			odd = n/2;
+		}
+		else{
+			odd = n/2 + 1;
+		}
+	}
 
-    return (is_Prime[num]==true)? 1 : 0;
+	if(k>=odd){
+		cout << "YES" << endl;
+		return;
+	}
+	else{
+		cout << "NO" << endl;
+		return;
+	}
+
 }
 
 int main(){
@@ -51,9 +70,11 @@ int main(){
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
 
-    ll n;
-    cin >> n;
-    cout << check(n) << endl;
+    int t;
+    cin >> t;
 
+    while(t--){
+        solve();
+    }
     return 0;
 }
