@@ -25,56 +25,28 @@ typedef long double ld;
 #define endl "\n"
 
 void solve(){
-	int n, k;
-	cin >> n >> k;
+	ll n;
+	cin >> n;
 
-	vector<bool> v(n+1);
-	for(int i=0; i<=n; i++){
-		v[i] = 1;
-	}
 
-	v[0] = 0;
-	v[1] = 0;
-
-	for(int i=0; i*i<=n; i++){
-		if(v[i]==1){
-			for(int j=2*i; j<=n; j+=i){
-				v[j] = 0;
-			}
-		}
-	}
-
-	vector<int> prime;
-	for(int i=0; i<=n; i++){
-		if(v[i]==1){
-			prime.pb(i);
-		}
-	}
-
-	int cnt = 0;
-
-	for(int i=prime.size()-1; i>=0; i--){
-
-		for(int j=0; j<prime.size()-1; j++){
-			int num = prime[j]+prime[j+1]+1;
-
-			if(num==prime[i]){
-				cnt++;
-				break;
-			}
-		}
-	}
-
-	if(cnt>=k){
-		cout << "YES" << endl;
+	int c = 1;
+	if(n%2 == 0){
+		cout << n/2 << " " << n/2 -1 << " " << 1 << endl;
 		return;
 	}
 	else{
-		cout << "NO" << endl;
-		return;
+		if(n%4==1){
+			cout << n/2 -1 << " " << n/2 + 1 << " " << 1 << endl;
+			return;
+		}
+		if(n%4 == 3){
+			cout << n/2 -2 << " " << n/2 +2 << " " << 1 << endl;
+			return;
+		}
 	}
-	
+
 }
+
 
 int main(){
     init_code();
@@ -82,7 +54,11 @@ int main(){
     ios_base::sync_with_stdio(0); 
     cin.tie(NULL);
 
+    int t;
+    cin >> t;
 
-    solve();
+    while(t--){
+        solve();
+    }
     return 0;
 }
